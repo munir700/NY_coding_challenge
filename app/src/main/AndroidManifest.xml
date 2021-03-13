@@ -16,8 +16,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name=".ui.news.NewsArticleActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,10 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".ui.news.NewsArticleActivity"
-            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.newsdetail.NewsArticleDetailsActivity"
             android:screenOrientation="portrait" />

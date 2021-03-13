@@ -13,20 +13,19 @@ android {
 
     defaultConfig {
         applicationId "com.codingchallenge"
-        minSdkVersion 19
-        targetSdkVersion 30
+        minSdkVersion rootProject.ext.minSdkVersions
+        targetSdkVersion rootProject.ext.targetSdkVersions
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         buildConfigField "Boolean", "API_LOGGING", "true"
         buildConfigField "String", "BASE_API_URL", "\"https://api.nytimes.com/svc/mostpopular/v2/\""
         buildConfigField "String", "API_KEY", "\"nRl7I0dAj0ahppaET5hmvtt924qtLuS9\""
-        buildConfigField "String", "SECRET_KEY", "\"bknPjd30IIHctvzu\""
-        buildConfigField "String", "API_ID", "\"37c86f23-689f-4624-a3c7-15d4f16a85da\""
     }
 
     buildTypes {
@@ -50,14 +49,6 @@ android {
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-   /* implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'*/
-
 
     implementation "com.google.android.material:material:$materialVersion"
     implementation "androidx.core:core-ktx:$coreKtxVersion"
@@ -99,8 +90,6 @@ dependencies {
     implementation "androidx.room:room-runtime:$roomRuntimeVersion"
     kapt "androidx.room:room-compiler:$roomRuntimeVersion"
     implementation "com.google.code.gson:gson:$gsonVersion"
-    implementation "androidx.paging:paging-runtime:$paging"
-    implementation "androidx.paging:paging-runtime-ktx:$paging"
 
     // Glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
@@ -111,15 +100,16 @@ dependencies {
     testImplementation "junit:junit:$jUnitVersion"
     androidTestImplementation "androidx.test.ext:junit:$jUnitExtVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espressoCoreVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVersion"
     testImplementation "androidx.arch.core:core-testing:$coreTestingVersion"
     testImplementation "com.squareup.okhttp3:mockwebserver:$mockWebserverVersion"
-    testImplementation "io.mockk:mockk:$mockkVersion"
-    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
 
     androidTestImplementation 'androidx.test:runner:1.3.0'
     androidTestImplementation 'androidx.test:rules:1.3.0'
     testImplementation "org.robolectric:robolectric:4.4"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+// AndroidJUnitRunner and JUnit Rules
 
     //SDP and SSP
     implementation 'com.intuit.sdp:sdp-android:1.0.6'

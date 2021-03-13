@@ -3,7 +3,7 @@ buildscript {
     ext.kotlinVersion = "1.4.31"
 
     ext.materialVersion = "1.3.0"
-    ext.daggerHiltVersion = '2.32-alpha'
+    ext.daggerHiltVersion = '2.33-beta'
 
     ext.compileSdkVersions = '30'
     ext.targetSdkVersions = '30'
@@ -11,14 +11,13 @@ buildscript {
     ext.minSdkVersions = '19'
 
 
-    ext.okHttpVersion = '4.7.2'
-    ext.supportLibVersion = '28.0.0'
+    ext.okHttpVersion = '4.9.1'
     ext.glideVersion = '4.11.0'
     ext.timberVersion = '4.7.1'
 
     //Coroutines
     ext.coroutinescoreVersion = '1.3.8'
-    ext.coroutinesAndroidVersion = '1.3.7'
+    ext.coroutinesAndroidVersion = '1.4.2'
 
     //Android
     ext.appcompatVersion = "1.2.0"
@@ -36,8 +35,6 @@ buildscript {
 
     //Room
     ext.roomRuntimeVersion = "2.2.6"
-    ext.roomKtxVersion = "2.2.6"
-    ext.paging = "2.1.2"
 
     //Retrofit
     ext.retrofitVersion = '2.9.0'

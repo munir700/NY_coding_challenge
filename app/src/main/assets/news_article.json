@@ -1,0 +1,43 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2021 The New York Times Company. All Rights Reserved.",
+  "num_results": 20,
+  "results": [
+    {
+      "uri": "nyt://article/1e2d6fdc-8632-59aa-a111-56efcee19e20",
+      "url": "https://www.nytimes.com/2021/02/20/us/texas-storm-electric-bills.html",
+      "id": 100000007615891,
+      "asset_id": 100000007615891,
+      "source": "New York Times",
+      "published_date": "2021-02-20",
+      "updated": "2021-02-22 08:43:38",
+      "section": "U.S.",
+      "subsection": "",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Power Failures and Blackouts;Electric Light and Power;Prices (Fares, Fees and Rates);Heating;Natural Gas;Abbott, Gregory W (1957- );Texas",
+      "column": null,
+      "byline": "By Giulia McDonnell Nieto del Rio, Nicholas Bogel-Burroughs and Ivan Penn",
+      "type": "Article",
+      "title": "His Lights Stayed on During Texas’ Storm. Now He Owes $16,752.",
+      "abstract": "After a public outcry from people like Scott Willoughby, whose exorbitant electric bill is soon due, Gov. Greg Abbott said lawmakers should ensure Texans “do not get stuck with skyrocketing energy bills” caused by the storm.",
+      "des_facet": [
+        "Power Failures and Blackouts",
+        "Electric Light and Power",
+        "Prices (Fares, Fees and Rates)",
+        "Heating",
+        "Natural Gas"
+      ],
+      "org_facet": [
+      ],
+      "per_facet": [
+        "Abbott, Gregory W (1957- )"
+      ],
+      "geo_facet": [
+        "Texas"
+      ],
+      "media": [
+      ],
+      "eta_id": 0
+    }
+  ]
+}
