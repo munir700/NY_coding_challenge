@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="newsArticle"
+            type="com.data.remote.models.NewsArticle" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/thumb_iv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="h,9:8"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_loading_pics" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            style="@style/row_tv_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:gravity="start"
+            android:text='@{newsArticle.title}'
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+
+        <TextView
+            android:id="@+id/abstract_tv"
+            style="@style/row_tv_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_6sdp"
+            android:ellipsize="end"
+            android:text='@{newsArticle.abstract}'
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/title_tv"
+            tools:text="Detail" />
+
+        <TextView
+            android:id="@+id/byline_tv"
+            style="@style/row_tv_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:ellipsize="end"
+            android:text='@{newsArticle.byline}'
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/abstract_tv"
+            tools:text="Byline" />
+
+        <TextView
+            android:id="@+id/source_tv"
+            style="@style/row_tv_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_6sdp"
+            android:ellipsize="end"
+            android:text='@{newsArticle.source}'
+            app:layout_constraintEnd_toStartOf="@+id/published_date_tv"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/byline_tv"
+            tools:text="Byline" />
+
+        <TextView
+            android:id="@+id/published_date_tv"
+            style="@style/row_tv_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:drawableStart='@{@drawable/ic_date}'
+            android:text='@{newsArticle.publishedDate}'
+            app:layout_constraintBaseline_toBaselineOf="@+id/source_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="published date" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.32" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
