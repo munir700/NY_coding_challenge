@@ -42,6 +42,7 @@
                     android:layout_marginTop="@dimen/_7sdp"
                     android:layout_marginBottom="@dimen/_7sdp"
                     android:background="?android:selectableItemBackground"
+                    android:contentDescription="TODO"
                     android:onClick="onClose"
                     android:padding="@dimen/_6sdp"
                     android:scaleType="fitCenter"
@@ -49,8 +50,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/ic_back_24"
-                    android:contentDescription="TODO" />
+                    app:srcCompat="@drawable/ic_back_24" />
 
                 <TextView
                     android:id="@+id/title_tv_tb"
